@@ -1,0 +1,32 @@
+.sidebar-nav {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none; }
+
+body {
+  text-align: center;
+  background-color: purple; }
+
+.text {
+  color: powderblue; }
+
+.list {
+  color: white;
+  display: inline-block;
+  text-align: left; }
+
+.link {
+  color: white;
+  text-decoration: none; }
+
+.link:hover {
+  color: black;
+  text-decoration: underline; }
+
+#footnote-1, #footnote-2 {
+  font-size: 10px; }
+
+sub {
+  font-size: 0.4em; }
+
+/*# sourceMappingURL=styles.css.map */

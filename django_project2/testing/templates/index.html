@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1 class="text">Local Library Home<sub><a class="link" href="#footnote-1">[1]</a></sub></h1>
+  <p class="text">
+    Welcome to LocalLibrary, a website developed by
+    <em>Mozilla Developer Network</em>!
+  </p>
+  <h2 class="text">What We Have Right Now<sub><a class="link" href="#footnote-2">[2]</a></sub></h2>
+  <p class="text">The library has the following record counts:</p>
+  <ul class = 'list'>
+    <li><strong>Books:</strong> {{ num_books }}</li>
+    <li><strong>Copies:</strong> {{ num_instances }}</li>
+    <li><strong>Copies available:</strong> {{ num_instances_available }}</li>
+    <li><strong>Authors:</strong> {{ num_authors }}</li>
+  </ul>
+
+  <p class="text">You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.</p>
+
+  <p id="footnote-1" class="text">1. Run by the T'uo Nation. Full name: The Socialist Republic of T'uo.
+    <br> Be luckly that you are a citizen. Otherwise, you would gotten a 403 or 451 HTTP Error.
+  </p>
+  <p id="footnote-2" class="text">2. May Take A While To Update.</p>
+{% endblock %}
