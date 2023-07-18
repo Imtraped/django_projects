@@ -82,7 +82,7 @@ def renew_book_librarian(request, pk):
             book_instance.save()
 
             # redirect to a new URL:
-            return HttpResponseRedirect(reverse('/'))
+            return HttpResponseRedirect(reverse('index'))
 
     # If this is a GET (or any other method) create the default form.
     else:
@@ -93,4 +93,4 @@ def renew_book_librarian(request, pk):
         'form': form,
         'book_instance': book_instance,
     }
-    return render(request, 'catalog/book_renew_librarian.html', context)
+    return render(request, 'testing/book_renew_librarian.html', context)
