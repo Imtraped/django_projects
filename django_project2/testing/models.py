@@ -3,6 +3,7 @@ from django.urls import reverse # Used to generate URLs by reversing the URL pat
 import uuid # Required for unique book instances
 from django.contrib.auth.models import User
 from django.utils.translation import gettext_lazy as _
+from datetime import date
 
 # Create your models here.
 class Genre(models.Model):
@@ -74,6 +75,11 @@ class BookInstance(models.Model):
     def __str__(self):
         """String for representing the Model object."""
         return f'{self.id} ({self.book.title})'
+    
+    @property
+    def is_overdue(self):
+        # Determines if the book is overdue based on due date and current date
+        return bool(self.due_back and date.today() > self.due_back)
 
 class Author(models.Model):
     """Model representing an author."""
