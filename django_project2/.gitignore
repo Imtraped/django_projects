@@ -2,3 +2,6 @@
 *.css
 *.css.map
 *.scss
+
+# I'm annoyed with these
+*.pyc
